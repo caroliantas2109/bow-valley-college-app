@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --white-color: #FAFAFC;
+  --black-color: #1E1E20;
+  --main-background: #ECECF6;
+  --blue-color: #4754EF;
+  --gray-color: #59655D;
+  --orange-100: #ff8700;
+  --red-100: #ff003a;
+  --blue-90: #19acff;
+  --purple-90: #795edb
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  background-color: var(--main-background);
+  font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main{
+  height: calc(100dvh - 72px);
+  background-color: var(--main-background);
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.flex-row-space-between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-col-center{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-center-all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-holder{
+  width: 32px;
+}
+
+.logo-img{
+  width: 100%;
+}
+
+
+.text-heading{
+  font-family: "Inter", sans-serif;;
+}
+
+.text-body{
+    font-family: "Poppins", sans-serif;
+}
+
+.fs-big-2{
+  font-size: 72px;
+}
+
+.fs-mid-1{
+  font-size: 18px;
+}
+
+.fw-xxl{
+  font-weight: 800;
+}
+
+.fw-m{
+  font-weight: 500;
+}
+
+.capitalize-text{
+  text-transform: capitalize;
+}
+
+.orange-gradient-text {
+  background-image: linear-gradient(90deg, var(--orange-100), var(--red-100));
+}
+
+.purple-orange-gradient-text {
+  background-image: linear-gradient(90deg, var(--blue-90) 3%, var(--purple-90) 62%, var(--orange-100));
+}
+
+.bg-clip-text{
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.btn1{
+  padding: 10px 40px;
+  border-radius: 12px;
+  margin-top: 48px;
+  border: none;
+  background-image: linear-gradient(90deg, #ff8700, #ff9f33);
+  color: var(--white-color);
+  transition: transform 0.2s ease-in;
+}
+
+.btn1:hover{
+  cursor: pointer;
+  transform: scale(1.05);
 }

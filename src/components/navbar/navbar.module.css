@@ -1,0 +1,36 @@
+.navbar{
+    background-color: var(--white-color);
+    color: var(--gray-color);
+    width: 280px;
+    height: 100dvh;
+    padding: 40px 24px;
+    position: absolute;
+    top:0;
+    z-index: 10;
+    transition: left 0.3s ease-in;
+}
+
+.navbar.open{
+    left: 0;
+}
+.navbar.close{
+    left: -100%;
+}
+
+.logoImage{
+    margin-bottom: 1.5rem;
+}
+
+.navButtons{
+    font-size: .8rem;
+    margin-bottom: .6rem;
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    padding:12px 8px;
+    border-radius: 1rem;
+}
+
+.navIcon{
+    font-size: 1rem;
+}
