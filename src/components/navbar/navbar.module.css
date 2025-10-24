@@ -29,6 +29,12 @@
     align-items: center;
     padding:12px 8px;
     border-radius: 1rem;
+    transition: color 0.3s ease-in;
+}
+
+.navButtons:hover{
+    color: var(--blue-90);
+    cursor: pointer;
 }
 
 .navIcon{

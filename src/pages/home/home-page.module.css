@@ -4,7 +4,7 @@
     background-image: url("https://cdn.prod.website-files.com/66a28fdfe76f2f849d7b00f3/68d422beab06688ccd6d0d72_ee6237eca38343e270f0589c8f7b267a_Open-House1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0 -140px;
+    /*background-position: 0 -140px;*/
 }
 
 .homePageCover{
@@ -28,4 +28,38 @@
     color: var(--white-color);
     position: relative;
     top: -80px;
+}
+
+.slideInLeft{
+    animation: slideInLeft 1s cubic-bezier(0.47, 0, 0.745, 0.715) .2s backwards;
+}
+.slideUp{
+    animation: slideUp .4s linear .8s backwards;
+}
+
+@keyframes slideInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(120px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
