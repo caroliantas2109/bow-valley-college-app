@@ -3,6 +3,7 @@ import './App.css';
 
 //------------------------pages -------------------------------
 import HomePage from './pages/home/home-page.jsx';
+import Registration from './pages/student/registration/student-registration.jsx';
 
 //------------------components---------------------------------
 import NavBar from './components/navbar/navbar.jsx';
@@ -50,6 +51,7 @@ function App() {
       <main className='main' onClick={()=> openCloseNavBar(false)}>
         <Routes>
           <Route index={true} element={<HomePage />} />
+          <Route path='/registration' element={<Registration/>} />
         </Routes>
       </main>
 
