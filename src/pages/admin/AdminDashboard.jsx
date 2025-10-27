@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 
+//lets import data
+import { students, admins, courses, programs } from '../../data/mockData.js';
+import '../../styles/Dashboard.css';
+
 const AdminDashboard = ({ userData, onLogout }) => {
   const [activeTab, setActiveTab] = useState('dashboard');
+  userData = students;
   
   const systemStats = {
     totalStudents: 245,
@@ -15,7 +20,7 @@ const AdminDashboard = ({ userData, onLogout }) => {
       {/* Header */}
       <header className="dashboard-header">
         <div className="header-left">
-          <h1>Bou Valley College</h1>
+          <h1>Bow Valley College</h1>
           <p>Administration Portal</p>
         </div>
         <div className="header-right">
