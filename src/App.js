@@ -4,6 +4,7 @@ import './App.css';
 //------------------------pages -------------------------------
 import HomePage from './pages/home/home-page.jsx';
 import Registration from './pages/student/registration/student-registration.jsx';
+import AdminViewStudent from './pages/admin/view_student/view_student.jsx';
 
 //------------------components---------------------------------
 import NavBar from './components/navbar/navbar.jsx';
@@ -52,6 +53,7 @@ function App() {
         <Routes>
           <Route index={true} element={<HomePage />} />
           <Route path='/registration' element={<Registration/>} />
+          <Route path='/adminviewstudent' element={<AdminViewStudent/>} />
         </Routes>
       </main>
 

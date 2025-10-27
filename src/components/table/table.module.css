@@ -1,0 +1,22 @@
+
+.table{
+    width: 100%;
+}
+
+table, th, tr{
+}
+
+thead{
+    text-align: left;
+    background-color: var(--purple-90);
+    color: white;
+}
+
+thead th{
+    font-weight: 400;
+    padding: 4px 12px;
+}
+
+tbody td{
+    padding: 12px;
+}
