@@ -1,0 +1,84 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "sender": "a.dumbledore01@email.com",
+      "senderName": "Albus Dumbledore",
+      "subject": "Project Update",
+      "body": "Hi there! I wanted to give you an update on the current project status. We are making good progress and should be on track for the deadline.",
+      "timestamp": "2025-10-27T10:30:00.000Z",
+      "read": false,
+      "starred": false
+    },
+    {
+      "id": 2,
+      "sender": "s.snape202@email.com",
+      "senderName": "Severus Snape",
+      "subject": "Meeting Tomorrow",
+      "body": "Don't forget about our meeting tomorrow at 2 PM. We'll be discussing the quarterly results and planning for next quarter.",
+      "timestamp": "2025-10-27T09:15:00.000Z",
+      "read": true,
+      "starred": true
+    },
+    {
+      "id": 3,
+      "sender": "admin@company.com",
+      "senderName": "Admin Team",
+      "subject": "System Maintenance",
+      "body": "We will be performing system maintenance this weekend. Please save your work and log out by Friday evening.",
+      "timestamp": "2025-10-26T16:45:00.000Z",
+      "read": false,
+      "starred": false
+    },
+    {
+      "id": 4,
+      "sender": "l.lovegood@email.com",
+      "senderName": "Luna Lovegood",
+      "subject": "Welcome to the Team!",
+      "body": "Welcome aboard! We are excited to have you join our team. Please let me know if you have any questions as you get started.",
+      "timestamp": "2025-10-25T14:20:00.000Z",
+      "read": true,
+      "starred": false
+    },
+    {
+      "id": 5,
+      "sender": "prefects@admin.com",
+      "senderName": "Prefects",
+      "subject": "Q4 Campaign Results",
+      "body": "Here are the final results from our Q4 marketing campaign. Overall performance exceeded expectations with a 15% increase in conversions.",
+      "timestamp": "2025-10-24T11:30:00.000Z",
+      "read": false,
+      "starred": true
+    },
+    {
+      "id": 6,
+      "sender": "hr@company.com",
+      "senderName": "HR Department",
+      "subject": "Benefits Enrollment Reminder",
+      "body": "This is a friendly reminder that benefits enrollment closes this Friday. Please make sure to review and submit your selections before the deadline.",
+      "timestamp": "2025-10-23T13:45:00.000Z",
+      "read": true,
+      "starred": false
+    },
+    {
+      "id": 7,
+      "sender": "h.potter03@email.com",
+      "senderName": "Harry Potter",
+      "subject": "Code Review Request",
+      "body": "Could you please review the pull request I submitted for the authentication module? I've implemented the changes we discussed in last week's meeting.",
+      "timestamp": "2025-10-22T16:20:00.000Z",
+      "read": false,
+      "starred": false
+    },
+    {
+      "id": 8,
+      "sender": "finance@company.com",
+      "senderName": "Finance Team",
+      "subject": "Expense Report Due",
+      "body": "Your monthly expense report is due by end of day tomorrow. Please submit all receipts and documentation through the finance portal.",
+      "timestamp": "2025-10-21T10:15:00.000Z",
+      "read": true,
+      "starred": false
+    }
+  ]
+}
