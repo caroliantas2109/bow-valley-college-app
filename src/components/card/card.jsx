@@ -1,6 +1,8 @@
 import styles from './card.module.css'
 
 function Card(props) {
+    const cardType = props.cardType
+
     return <div className={`${styles.card} flex-col-gap-10`}>
         <p className={styles.header}>
             introduction to game and simulation programming
@@ -55,7 +57,7 @@ function Card(props) {
             <div className={`${styles.others} flex-center-all`}>
                 <div className={styles.pill}>Online (Synchronous)</div>
                 <div className={styles.pill}> 15/40 seats available</div>
-                <button className={`btn2`}>Remove</ button>
+                <button className={`btn2`}>{cardType == "view" ? "Remove" : "Add"}</ button>
             </div>
         </div>
     </div>

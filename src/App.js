@@ -5,6 +5,13 @@ import './App.css';
 import HomePage from './pages/home/home-page.jsx';
 import Registration from './pages/student/registration/student-registration.jsx';
 import AdminViewStudent from './pages/admin/view_student/view_student.jsx';
+import SignUp from './pages/auth/signup/signup.jsx';
+import Login from './pages/auth/login/login.jsx';
+import AdminDashboard from './pages/admin/dashboard/AdminDashboard.jsx';
+import ProfileView from './pages/admin/view_profile/view_profile.jsx';
+import CourseManager from './pages/admin/courses/courseManager.jsx';
+import Messages from './pages/admin/messages/messages.jsx';
+import StudentDashboard from './pages/student/dashboard/StudentDashboard.jsx';
 
 //------------------components---------------------------------
 import NavBar from './components/navbar/navbar.jsx';
@@ -22,7 +29,7 @@ import { TbLogout } from "react-icons/tb";
 
 
 function App() {
-  const [loggedIn, setUser] = useState("none");
+  const [loggedIn, setUser] = useState("student");
   const [navItems, setNavItems] = useState([]);
 
   const [navBarIsOpen, openCloseNavBar] = useState(false);
@@ -53,15 +60,20 @@ function App() {
         <Routes>
           <Route index={true} element={<HomePage />} />
           <Route path='/registration' element={<Registration/>} />
+          <Route path='/studentdashboard' element={<StudentDashboard/>} />
           <Route path='/adminviewstudent' element={<AdminViewStudent/>} />
+          <Route path='/admindashboard' element={<AdminDashboard/>} />
+          <Route path='/viewprofile' element={<ProfileView/>} />
+          <Route path='/courses' element={<CourseManager/>} />
+          <Route path='/messages' element={<Messages/>} />
+          <Route  path='/signup' element={<SignUp/>} />
+          <Route path='/login' element={<Login/>}/>
         </Routes>
       </main>
 
     </BrowserRouter>
   );
 }
-
-/*can we give Routes styling, is it like a container?  */
 
 export default App;
 

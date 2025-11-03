@@ -19,4 +19,19 @@ thead th{
 
 tbody td{
     padding: 12px;
+    font-size: 12px;
+}
+
+tbody tr{
+    transition: background-color ease-in 0.2s;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #E8E3FF; /* muted lilac */
+}
+tbody tr:nth-child(odd) {
+  background-color: #F7F6FD; /* near white with a lavender tint */
+}
+tbody tr:hover {
+  background-color: #D9CCFF; /* noticeable hover for interactivity */
 }

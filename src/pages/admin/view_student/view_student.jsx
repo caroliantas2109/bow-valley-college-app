@@ -3,7 +3,6 @@ import Table from '../../../components/table/table';
 import { GrFormSearch } from "react-icons/gr";
 
 
-
 function AdminViewStudent(props) {
     const tableSettings = [
         {

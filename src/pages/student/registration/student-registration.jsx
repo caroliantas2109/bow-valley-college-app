@@ -27,11 +27,11 @@ function Registration(props){
             <p className={`${styles.regPageTitle}`}>My Courses</p>
 
             <div className={`${styles.cardSlideShow} scrollbar`}>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                <Card cardType = "view"></Card>
+                <Card cardType = "view"></Card>
+                <Card cardType = "view"></Card>
+                <Card cardType = "view"></Card>
+                <Card cardType = "view"></Card>
             </div>
 
             <div className={`${styles.navCircles} flex-row-space-between`}>
@@ -60,14 +60,14 @@ function Registration(props){
             </div>
 
             <div className={`${styles.courseList}`}>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                <Card cardType="register"></Card>
+                <Card cardType="register"></Card>
+                <Card cardType="register"></Card>
+                <Card cardType="register"></Card>
+                <Card cardType="register"></Card>
+                <Card cardType="register"></Card>
+                <Card cardType="register"></Card>
+                <Card cardType="register"></Card>
             </div>
 
             <div className={`${styles.courseListPages}`}>
