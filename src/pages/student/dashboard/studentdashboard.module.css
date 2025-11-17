@@ -12,7 +12,7 @@
 .dashboardHeader {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -273,6 +273,118 @@
     grid-template-columns: 1fr;
   }
   .actionButtons {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*for messages*/
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contactForm input[type="text"],
+.contactForm select,
+.contactForm textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  background-color: var(--white-color);
+  font-size: 14px;
+}
+
+.contactForm input:focus,
+.contactForm select:focus,
+.contactForm textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid var(--blue-90);
+}
+
+.textArea {
+  resize: vertical;
+}
+
+.formMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.helperText {
+  font-size: 12px;
+  color: var(--gray-color);
+}
+
+.errorText {
+  font-size: 12px;
+  color: #b3261e;
+  font-weight: 600;
+}
+
+.successBanner {
+  background: #eafff1;
+  color: #1b7f41;
+  border: 1px solid #b4f0c9;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.errorBanner {
+  background: #fff1f1;
+  color: #7f1b1b;
+  border: 1px solid #f0b4b4;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.checkboxInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  height: 0 !important;
+  width: 0 !important;
+  opacity: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .formRow {
     grid-template-columns: 1fr;
   }
 }

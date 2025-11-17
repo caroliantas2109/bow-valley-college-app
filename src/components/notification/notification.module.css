@@ -1,0 +1,60 @@
+
+.notificationBar{
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 100;
+}
+
+.notificationBody{
+    padding: 24px;
+    display: flex;
+    border-radius: 6px;
+    column-gap: 12px;
+}
+
+.notificationBody.okay{
+    background-color: rgb(194, 255, 194);
+}
+
+.notificationBody.bad{
+    background-color: rgb(248 221 221);
+}
+
+.notificationBody.medium{
+    background-color: rgb(254, 255, 219);
+}
+
+.icon{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    font-family: "Poppins", sans-serif;
+}
+
+.title{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.messageBody{
+    font-size: 12px;
+    color: var(--gray-color);
+    text-transform: capitalize;
+    max-width: 400px;
+}
