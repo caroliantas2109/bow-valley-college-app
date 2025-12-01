@@ -5,6 +5,10 @@ import Card from '../../../components/card/card';
 import { GrFormSearch } from "react-icons/gr";
 function Registration(props){
 
+    function returnTermAsString(year, term){
+        return ``
+    }
+
     return <div className={`container ${styles.registration}`}>
         <div className={`flex-row-space-between ${styles.topHeader}`}>
             <div className={`${styles.leftPart} flex-col-space-between`}>

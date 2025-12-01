@@ -78,10 +78,10 @@ function App() {
       <main className='main' onClick={() => openCloseNavBar(false)}>
         <Routes>
           <Route index={true} element={<HomePage />} />
-          <Route path='/registration' element={<Registration />} />
-          <Route path='/studentdashboard' element={<StudentDashboard />} />
+          <Route path='/student/registration' element={<Registration />} />
+          <Route path='/student/dashboard' element={<StudentDashboard />} />
           <Route path='/adminviewstudent' element={<AdminViewStudent />} />
-          <Route path='/admindashboard' element={<AdminDashboard />} />
+          <Route path='/admin/dashboard' element={<AdminDashboard />} />
           <Route path='/viewprofile' element={<ProfileView />} />
           <Route path='/courses' element={<CourseManager />} />
           <Route path='/messages' element={<Messages />} />
@@ -102,7 +102,7 @@ function App() {
 export function useCallNotificationBar() {
   const { setNotificationState } = useNotification();
 
-  //define a function that uses setNotificationState to set the values of the notification bar
+  //function that uses setNotificationState to set the values of the notification bar
   function callNotificationBarWithValues(notificationTitle, notificationMessage, type = "medium", icon = FiBell) {
     setNotificationState({
       notification: {

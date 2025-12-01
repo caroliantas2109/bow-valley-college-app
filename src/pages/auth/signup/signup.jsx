@@ -1,9 +1,12 @@
 import styles from '../signup.module.css';
 import { useCallNotificationBar } from '../../../App';
 import { useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 //
 function SignUp(props) {
     //const errorEl = useRef(null) i wanted to use this to make a dynamic span el that appears anywhere there is an error but it might take some time, will do later
+
+    const navigate = useNavigate();
 
     const passwordElement = useRef(null);
 
@@ -16,6 +19,8 @@ function SignUp(props) {
         e.preventDefault();
 
         let readyToSubmit = true;
+
+        let formBody = {};
 
         const button = e.currentTarget;
 
@@ -35,21 +40,21 @@ function SignUp(props) {
             //phone number check 
             if(key === "phone" && value.length !== 10) {
                 //check if phone number length is greater/less than 10
-                callNotificationBarWithValues("Invalid credentials", "phone number isn't correct");
+                callNotificationBarWithValues("Invalid credentials", "phone number isn't correct", "bad");
                 readyToSubmit = false;
                 break;
             }
 
             //email check 
             if(key === "email" && !emailRegex.test(value)) {
-                callNotificationBarWithValues("Invalid credentials", "email format isn't valid");
+                callNotificationBarWithValues("Invalid credentials", "email format isn't valid", "bad");
                 readyToSubmit = false;
                 break;
             }
 
             //password check 
             if(key === "password" && value.length < 8) {
-                callNotificationBarWithValues("Invalid credentials", "Password strength is poor");
+                callNotificationBarWithValues("Invalid credentials", "Password strength is poor", "bad");
                 readyToSubmit = false;
                 break;
             }
@@ -61,16 +66,68 @@ function SignUp(props) {
                 break;
             }
 
+            // if(key === "birthday"){
+            //     const splitBirthday = value.split("-");
+
+            //     const currentYear = new Date().getFullYear();
+
+            //     //check if student is up to 15 years
+            //     if(currentYear - parseInt(splitBirthday[0]) <= 15) {
+            //         callNotificationBarWithValues("Invalid credentials", "Students must be older than 15");
+            //         readyToSubmit = false;
+            //         break;
+            //     }
+            // }
+
+            //append key-value to fromBody
+            if(key !== "confirmPassword"){
+                formBody[key] = value;
+            }
+            
             //too much repetition, please put in a function
 
             //console.log(key, value);
         }
 
         if(readyToSubmit === false) {
-            console.log("Ehya, nothing for you");
+            callNotificationBarWithValues("Submission Error", "Form not submitted", "bad");
         }
         else{
-            console.log("lets gooo");
+            //console.log(formBody);
+            createUser(formBody);
+        }
+    }
+
+    async function createUser(body) {
+        try {
+            const res = await fetch(
+                "http://localhost:5000/api/users",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(body),
+                    credentials: 'include'
+                }
+            );
+
+            if (!res.ok) {
+                const errorText = await res.json();
+                console.error("Server error:", res.status, errorText.error);
+                callNotificationBarWithValues("Server error", "Could not create user", "bad");
+                return;
+            }
+
+            const data = await res.json();
+            console.log("User created:", data.message);
+            callNotificationBarWithValues("Success", "Account created successfully", "okay");
+
+            //reroute to student dashboard page
+            navigate("/student/dashboard");
+        } catch (err) {
+            console.error("Network error:", err);
+            callNotificationBarWithValues("Network error", "Could not reach server", "bad");
         }
     }
 
@@ -151,22 +208,11 @@ function SignUp(props) {
                 </div>
 
                 <div className={styles['form-row']}>
-                    <div className={styles['form-group']}>
-                        <label>Department</label>
-                        <select name="department">
-                            <option value=""></option>
-                            <option value="Business">Business</option>
-                            <option value="IT">IT</option>
-                            <option value="Health">Health</option>
-                        </select>
-                    </div>
+
                     <div className={styles['form-group']}>
                         <label>Program</label>
                         <select name="program">
-                            <option value=""></option>
                             <option value="Software Development">Software Development</option>
-                            <option value="Data Analytics">Data Analytics</option>
-                            <option value="Marketing">Marketing</option>
                         </select>
                     </div>
                 </div>

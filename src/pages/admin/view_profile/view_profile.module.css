@@ -172,7 +172,7 @@
 }
 
 .statValue {
-  font-size: 22px;
+  font-size: 12px;
   font-weight: 800;
   line-height: 1;
   background-image: linear-gradient(90deg, var(--blue-90) 3%, var(--purple-90) 62%, var(--orange-100));
@@ -183,7 +183,7 @@
 
 .statLabel {
   margin-top: 4px;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 600;
   color: var(--gray-color);
 }
@@ -245,6 +245,14 @@
   height: 8px;
   border-radius: 999px;
   background: var(--purple-90);
+}
+
+.formActions{
+  margin-top: 24px;
+}
+
+.formActions >button{
+  margin-right: 12px;
 }
 
 /* Responsive */
