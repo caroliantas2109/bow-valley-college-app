@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useMemo, useState } from 'react';
 import styles from './courseManager.module.css';
 
@@ -34,7 +33,7 @@ export default function CourseManager() {
   const [confirmingDelete, setConfirmingDelete] = useState(false);
   const [errors, setErrors] = useState({});
 
-  // seed data
+  
   useEffect(() => {
     setCourses(Array.isArray(mockCourses) ? mockCourses : []);
     setPrograms(Array.isArray(mockPrograms) ? mockPrograms : []);
@@ -43,7 +42,6 @@ export default function CourseManager() {
   useEffect(() => {
     // default new form
     newCourse();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const newCourse = () => {
