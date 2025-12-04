@@ -34,11 +34,12 @@ import { FiBell } from 'react-icons/fi';
 import { useNotification } from './globalProviders/NotificationProvider.jsx';
 
 function App() {
-  const [loggedIn, setUser] = useState("student");
+  const [loggedIn, setUser] = useState("student"); // "none" | "student" | "admin"
   const [navItems, setNavItems] = useState([]);
-  const [navBarIsOpen, openCloseNavBar] = useState(false);
+  const [navBarIsOpen, setNavBarIsOpen] = useState(false);
   const { notificationState } = useNotification();
 
+  // Configure navbar items based on logged-in role
   useEffect(() => {
     if (loggedIn === "none") {
       setNavItems([
@@ -63,18 +64,23 @@ function App() {
         { name: "View Profile", icon: TbUser, path: "/viewprofile" },
         { name: "Courses", icon: PiBooks, path: "/courses" },
         { name: "View Students", icon: TbUsers, path: "/adminviewstudent" },
-        { name: "Messages", icon: TbMessageCircle, path: "/messages" }
+        { name: "Messages", icon: TbMessageCircle, path: "/messages" },
+        { name: "Log Out", icon: TbLogout, path: "/login", logout: true }
       ]);
     }
   }, [loggedIn]);
 
   return (
     <BrowserRouter>
-      <NavBar navitems={navItems} isOpen={navBarIsOpen} closeMenu={openCloseNavBar} />
-      <TopNav openMenu={openCloseNavBar} />
+      <NavBar
+        navitems={navItems}
+        isOpen={navBarIsOpen}
+        closeMenu={setNavBarIsOpen}
+      />
+      <TopNav openMenu={setNavBarIsOpen} />
       <NotificationBar state={notificationState} />
 
-      <main className='main' onClick={() => openCloseNavBar(false)}>
+      <main className='main' onClick={() => setNavBarIsOpen(false)}>
         <Routes>
           <Route index={true} element={<HomePage />} />
           <Route path='/student/registration' element={<Registration />} />
