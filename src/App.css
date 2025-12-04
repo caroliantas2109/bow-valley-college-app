@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --white-color: #FAFAFC;
   --black-color: #1E1E20;
   --main-background: #ECECF6;
@@ -20,13 +19,13 @@
   --purple-90: #795edb;
 }
 
-.App{
+.App {
   background-color: var(--main-background);
   font-family: "Poppins", sans-serif;
   position: relative;
 }
 
-.main{
+.main {
   height: calc(100dvh - 72px);
   background-color: var(--main-background);
   font-family: "Poppins", sans-serif;
@@ -34,87 +33,87 @@
   overflow-y: scroll;
 }
 
-.flex-row-space-between{
+.flex-row-space-between {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.flex-col-space-between{
+.flex-col-space-between {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.flex-col-center{
+.flex-col-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.flex-center-all{
+.flex-center-all {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-col-gap-12{
+.flex-col-gap-12 {
   display: flex;
   flex-direction: row;
   column-gap: 12px;
 }
 
-.flex-col-gap-10{
+.flex-col-gap-10 {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
 
-.logo-holder{
+.logo-holder {
   width: 32px;
 }
 
-.logo-img{
+.logo-img {
   width: 100%;
 }
 
-.text-heading{
-  font-family: "Inter", sans-serif;;
+.text-heading {
+  font-family: "Inter", sans-serif;
 }
 
-.text-body{
+.text-body {
   font-family: "Poppins", sans-serif;
 }
 
-.fs-big-2{
+.fs-big-2 {
   font-size: 72px;
 }
 
-.fs-mid-1{
+.fs-mid-1 {
   font-size: 18px;
 }
 
-.fs-small-0{
+.fs-small-0 {
   font-size: 10px;
 }
 
-.text-gray{
+.text-gray {
   color: var(--gray-color);
 }
 
-.fw-xxl{
+.fw-xxl {
   font-weight: 800;
 }
 
-.fw-m{
+.fw-m {
   font-weight: 500;
 }
 
-.capitalize-text{
+.capitalize-text {
   text-transform: capitalize;
 }
 
-.container{
+.container {
   padding: 8px 24px;
   max-width: 1400px;
   margin: 0 auto;
@@ -128,17 +127,17 @@
   background-image: linear-gradient(90deg, var(--blue-90) 3%, var(--purple-90) 62%, var(--orange-100));
 }
 
-.bg-clip-text{
+.bg-clip-text {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-button{
+button {
   border: none;
 }
 
-.btn1{
+.btn1 {
   display: inline-block;
   margin-top: 48px;
   padding: 10px 40px;
@@ -148,17 +147,17 @@ button{
   transition: transform 0.2s ease-in;
 }
 
-.btn1:hover{
+.btn1:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
 
-.btn-holder{
+.btn-holder {
   overflow: hidden;
   display: inline-block;
 }
 
-.btn2{
+.btn2 {
   padding: 8px 32px;
   color: var(--white-color);
   font-weight: 800;
@@ -167,46 +166,6 @@ button{
   background-color: #8387FF;
 }
 
-.scrollbar{
+.scrollbar {
   scrollbar-width: none;
 }
-=======
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
->>>>>>> 3ae9be817abb6f8cf014c29a765b53e479f6cce7

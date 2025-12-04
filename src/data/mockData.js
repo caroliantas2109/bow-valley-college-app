@@ -77,7 +77,8 @@ export const programs = [
     endDate: "June 15, 2026",
     domesticFee: 9254,
     internationalFee: 27735,
-    description: "A comprehensive two-year software development diploma program designed to equip students with practical programming skills."
+    description:
+      "A comprehensive two-year software development diploma program designed to equip students with practical programming skills."
   },
   {
     id: 2,
@@ -90,11 +91,10 @@ export const programs = [
     endDate: "June 15, 2025",
     domesticFee: 7895,
     internationalFee: 23675,
-    description: "Jumpstart your tech career with our one-year post-diploma program in software development."
+    description:
+      "Jumpstart your tech career with our one-year post-diploma program in software development."
   }
 ];
-<<<<<<< HEAD
 
-export const messagesData = []
-=======
->>>>>>> 3ae9be817abb6f8cf014c29a765b53e479f6cce7
+
+export const messagesData = [];
