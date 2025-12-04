@@ -1,0 +1,390 @@
+/* ===== Student Dashboard (CSS Modules) ===== */
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--main-background);
+  color: var(--black-color);
+}
+
+/* Header */
+.dashboardHeader {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: var(--white-color);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.headerLeft h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.headerLeft p {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--gray-color);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.currentDate {
+  background: #eef1ff;
+  color: #3f47c0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoutBtn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #fff0f0;
+  color: #c73636;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s;
+}
+.logoutBtn:hover {
+  cursor: pointer;
+  background: #ffe4e4;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Layout */
+.dashboardBody {
+  display: grid;
+  grid-template-columns: 1fr; /* you removed sidebar, so single column */
+  gap: 24px;
+  padding: 24px;
+}
+
+/* Main area */
+.mainContent {
+  align-self: start;
+}
+
+/* Cards */
+.card {
+  background: var(--white-color);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Dashboard top */
+.dashboardTab {}
+
+.welcomeSection {
+  margin-bottom: 18px;
+}
+
+.dashboardTab h2 {
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 12px;
+}
+
+/* Student info card */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.infoItem {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  background: #f8f9ff;
+  border: 1px dashed rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.infoItem label {
+  font-size: 12px;
+  color: var(--gray-color);
+}
+
+.infoItem span {
+  font-weight: 700;
+}
+
+/* Grid of cards */
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 18px;
+}
+
+/* Current Courses */
+.courseItem {
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 12px;
+  background: #f7f8ff;
+  margin-bottom: 10px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.courseItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.07);
+}
+
+.courseItem h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 800;
+  background-image: linear-gradient(90deg, var(--blue-90), #6b5fd3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.courseItem p {
+  font-size: 13px;
+  color: var(--gray-color);
+}
+
+/* Upcoming Deadlines */
+.deadlineItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fffdf7;
+  margin-bottom: 10px;
+}
+
+.deadlineTask {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.deadlineDate {
+  font-size: 12px;
+  font-weight: 700;
+  color: #a05a00;
+  background: #fff0d8;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+/* Quick Actions */
+.actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btnPrimary {
+  background-color: var(--blue-90);
+  color: #fff;
+  border: 1px solid #4b5ae4;
+}
+
+.btnPrimary:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 4px rgba(75, 90, 228, 0.2);
+}
+
+/* Profile Tab */
+.profileTab {}
+
+.profileTabTitle {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 12px;
+}
+
+.profileInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+}
+
+.profileInfo p {
+  background: #f8f9ff;
+  border: 1px dashed rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.profileInfo strong {
+  color: #3f47c0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+  .infoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .infoGrid,
+  .profileInfo {
+    grid-template-columns: 1fr;
+  }
+  .actionButtons {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*for messages*/
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contactForm input[type="text"],
+.contactForm select,
+.contactForm textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  background-color: var(--white-color);
+  font-size: 14px;
+}
+
+.contactForm input:focus,
+.contactForm select:focus,
+.contactForm textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid var(--blue-90);
+}
+
+.textArea {
+  resize: vertical;
+}
+
+.formMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.helperText {
+  font-size: 12px;
+  color: var(--gray-color);
+}
+
+.errorText {
+  font-size: 12px;
+  color: #b3261e;
+  font-weight: 600;
+}
+
+.successBanner {
+  background: #eafff1;
+  color: #1b7f41;
+  border: 1px solid #b4f0c9;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.errorBanner {
+  background: #fff1f1;
+  color: #7f1b1b;
+  border: 1px solid #f0b4b4;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.checkboxInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  height: 0 !important;
+  width: 0 !important;
+  opacity: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}

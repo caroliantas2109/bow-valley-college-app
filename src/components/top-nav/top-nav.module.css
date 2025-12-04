@@ -1,0 +1,14 @@
+
+.topNav{
+    height: 72px;
+    padding: 8px 24px;
+}
+
+.menuBar{
+    width: 24px;
+    height: 24px;
+}
+
+.menuBarHolder:hover{
+    cursor: pointer;
+}
