@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import { useState, useEffect } from "react";
 
@@ -258,3 +259,28 @@ export function useCallNotificationBar() {
 
 export default App;
 
+=======
+import React from 'react';
+import { students, admins, courses, programs } from './data/mockData';
+// import './styles/Common.css';
+// import './styles/HomePage.css';
+// import './styles/Dashboard.css';
+import AdminDashboard from './pages/admin/AdminDashboard';
+
+function App() {
+  // Test if data imports correctly
+  console.log('Students:', students);
+  console.log('Admins:', admins);
+  console.log('Courses:', courses);
+  console.log('Programs:', programs);
+
+  return (
+    <div className="App">
+
+      <AdminDashboard></AdminDashboard>
+    </div>
+
+
+  );
+}
+>>>>>>> 3ae9be817abb6f8cf014c29a765b53e479f6cce7

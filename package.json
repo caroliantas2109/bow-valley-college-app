@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "course-registration-platform",
+=======
+  "name": "bow-valley-college-app",
+>>>>>>> 3ae9be817abb6f8cf014c29a765b53e479f6cce7
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +13,10 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+<<<<<<< HEAD
     "react-icons": "^5.5.0",
+=======
+>>>>>>> 3ae9be817abb6f8cf014c29a765b53e479f6cce7
     "react-router-dom": "^7.9.4",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

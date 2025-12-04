@@ -93,5 +93,8 @@ export const programs = [
     description: "Jumpstart your tech career with our one-year post-diploma program in software development."
   }
 ];
+<<<<<<< HEAD
 
 export const messagesData = []
+=======
+>>>>>>> 3ae9be817abb6f8cf014c29a765b53e479f6cce7
